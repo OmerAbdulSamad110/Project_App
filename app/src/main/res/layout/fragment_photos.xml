@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefed"
+    tools:context=".Photos">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/photo_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <RelativeLayout
+        android:id="@+id/heading_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photo_toolbar"
+        android:background="@drawable/border_parallel"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:text="Photos of abc"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/sw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/share_phts"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="7dp"
+            android:text="Share with:" />
+
+        <TextView
+            android:id="@+id/share_phts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="7dp"
+            android:text="Friends" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/noPhts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading_box"
+        android:background="@drawable/button_parallel_left"
+        android:text="No photo to show"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:visibility="invisible"
+        android:padding="10dp"/>
+
+    <GridView
+        android:id="@+id/photoGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/heading_box"
+        android:layout_margin="4dp"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"></GridView>
+
+
+</RelativeLayout>

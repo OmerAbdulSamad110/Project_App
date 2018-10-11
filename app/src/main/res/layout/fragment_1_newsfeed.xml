@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefed"
+    tools:context=".NewsFeed">
+
+    <RelativeLayout
+        android:id="@+id/post_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:background="#fff"
+        android:clickable="true"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/post_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/border_4_search"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_toRightOf="@id/post_img"
+            android:text="Post a status update"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/feed_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/post_btn"
+        android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/nopost_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/post_btn"
+        android:layout_margin="2dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="Add friends to see news updates!"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:visibility="invisible" />
+</RelativeLayout>

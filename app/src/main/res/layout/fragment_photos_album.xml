@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefed"
+    tools:context=".photosAlbum">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/album_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Photo Albums" />
+
+    <Button
+        android:id="@+id/album_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/album_toolbar"
+        android:layout_margin="20dp"
+        android:background="@drawable/buttons_right"
+        android:text="Create Album"
+        android:textColor="@color/colorPrimary" />
+
+    <ListView
+        android:id="@+id/album_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/album_add"
+        android:layout_margin="1dp"
+        android:background="#fff" />
+
+    <TextView
+        android:id="@+id/no_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/album_toolbar"
+        android:layout_margin="20dp"
+        android:background="#efefef"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="No album to show"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

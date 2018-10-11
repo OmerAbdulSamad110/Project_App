@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefed"
+    android:fillViewport="true"
+    tools:context=".UserAccount">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/acc_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/acc_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/acc_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageView
+                        android:id="@+id/acc_img"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#fff"
+                        android:padding="3dp"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/acc_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/acc_img"
+                        android:padding="10dp"
+                        android:text="User Name Something"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="20dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/acc_btns"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/acc_name"
+                        android:layout_margin="5dp">
+
+                        <Button
+                            android:id="@+id/acc_add"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/buttons_left"
+                            android:text="Add friend"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:textSize="20dp"
+                            android:visibility="invisible" />
+
+                        <Button
+                            android:id="@+id/acc_unAdd"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/buttons_right"
+                            android:text="Unfriend"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20dp"
+                            android:visibility="invisible" />
+
+                        <Button
+                            android:id="@+id/acc_cancel"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/buttons_right"
+                            android:text="Cancel"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20dp"
+                            android:visibility="invisible" />
+
+                        <LinearLayout
+                            android:id="@+id/accept_Btns"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <Button
+                                android:id="@+id/acc_accept"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_weight="2"
+                                android:background="@drawable/button_parallel_left"
+                                android:text="Accept request"
+                                android:textAllCaps="false"
+                                android:textColor="#fff"
+                                android:textSize="20dp" />
+
+                            <Button
+                                android:id="@+id/acc_remove"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_weight="2"
+                                android:background="@drawable/button_parallel_right"
+                                android:text="Cancel"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/acc_btns"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/acc_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_parallel"></ListView>
+
+                        <Button
+                            android:id="@+id/acc_describe"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/button_parallel_left"
+                            android:text="Describe Yourself"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/acc_friend"
+                    android:layout_width="160dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/acc_start"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/frnd_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#000"
+                        android:scaleType="fitXY"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="#fff"
+                        android:text="Friends"
+                        android:textAllCaps="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/acc_photo"
+                    android:layout_width="160dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/acc_start"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/phts_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:background="#000"
+                        android:scaleType="fitXY" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="#fff"
+                        android:text="Photos"
+                        android:textAllCaps="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/post_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/acc_friend"
+                    android:layout_marginBottom="10dp"
+                    android:background="#fff"
+                    android:clickable="true"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/post_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/border_4_search"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_toRightOf="@id/post_img"
+                        android:text="Post a status update"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/acc_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/post_btn"
+                    android:layout_marginBottom="20dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

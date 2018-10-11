@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:background="@drawable/border_4_search"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#eae8e8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:weightSum="10"
+        android:background="#fff"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/simplels_img"
+            android:layout_width="2dp"
+            android:layout_height="52dp"
+            android:layout_weight="1.5"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/simplels_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:text="Label"
+            android:textSize="20dp" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".PostMaker">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/setting_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Create Post" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/pr_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/border_4_search"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/pr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/pr_img"
+                android:text="full name something"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pr_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/pr_img"
+                android:padding="5dp"
+                android:text="Share with: "
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:id="@+id/share_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pr_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/share"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/share_with"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pr_name"
+                    android:layout_weight="4"
+                    android:padding="5dp"
+                    android:text="Friends"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_drop" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <EditText
+                android:id="@+id/post_box"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_4_search"
+                android:gravity="top"
+                android:hint="Post a status update"
+                android:padding="5dp" />
+
+            <RelativeLayout
+                android:id="@+id/image_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/post_box"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/post_img"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#fff"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/nophoto" />
+
+                <TextView
+                    android:id="@+id/add_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/post_img"
+                    android:text="Add Image"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/remove_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_img"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/post_img"
+                    android:text="Remove Image"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/post_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_box"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttons_left"
+                android:text="Share"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
